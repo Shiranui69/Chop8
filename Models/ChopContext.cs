@@ -21,15 +21,13 @@ public partial class ChopContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySQL("Server=192.168.2.112;Database=chop;user=root");
+        => optionsBuilder.UseMySQL("Server=localhost;Database=chop;User=root");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Client>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
-
-            entity.ToTable("Client");
 
             entity.Property(e => e.Adress).HasMaxLength(100);
             entity.Property(e => e.Name).HasMaxLength(100);
@@ -39,8 +37,6 @@ public partial class ChopContext : DbContext
         modelBuilder.Entity<SecurityGuard>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
-
-            entity.ToTable("SecurityGuard");
 
             entity.Property(e => e.Adress).HasMaxLength(100);
             entity.Property(e => e.Name).HasMaxLength(100);
