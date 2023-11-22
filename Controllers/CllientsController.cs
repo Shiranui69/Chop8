@@ -48,6 +48,8 @@ namespace Chop.Controllers
             var client = db.Clients.SingleOrDefault(s => s.Id == id);
             if (client == null)
                 return NotFound();
+            db.Clients.Remove(client);
+            db.SaveChanges();
             return Ok(client);
         }
     }
