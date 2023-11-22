@@ -5,7 +5,7 @@ using Chop.Models;
 namespace Chop.Controllers
 {
     [ ApiController]
-    [Route("/Clients")]
+    [Route("/clients")]
     public class ClientsController : Controller
     {
         [HttpGet]
@@ -41,6 +41,7 @@ namespace Chop.Controllers
             return Ok(clis);
         }
         [HttpDelete]
+        [Route("{id}")]
         public IActionResult Delete(int id)
         {
             var db = new ChopContext();
