@@ -20,7 +20,7 @@
 			<UserControl Content="{Binding _ClientsUserControl1}"/>
 		</TabItem>
 		<TabItem Header="Охранники">
-			
+			<UserControl Content="{Binding _SecurytiGuardsUserControl}"/>
 		</TabItem>
 	</TabControl>
 

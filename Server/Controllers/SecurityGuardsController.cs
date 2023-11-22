@@ -43,6 +43,7 @@ namespace Chop.Controllers
             return Ok(secury);
         }
         [HttpDelete]
+        [Route("{id}")]
         public IActionResult Delete(int id)
         {
             var db = new ChopContext();
