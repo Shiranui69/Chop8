@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Chop.Models;
 
-namespace TomaToma.Controllers
+namespace Chop.Controllers
 {
     [ApiController]
     [Route("/SecurityGuards")]
