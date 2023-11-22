@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chop", "Chop.csproj", "{FF2A34B6-8E9C-4EFB-BC14-608B0EA1329E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chop", ".\Server\Chop.csproj", "{FF2A34B6-8E9C-4EFB-BC14-608B0EA1329E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chop8", "..\Chop8\Chop8.csproj", "{FCB75161-19AE-4F96-808E-BA30D1E39B84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chop8", ".\Client\Chop8.csproj", "{FCB75161-19AE-4F96-808E-BA30D1E39B84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
