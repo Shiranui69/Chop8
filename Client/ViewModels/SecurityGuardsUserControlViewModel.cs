@@ -46,7 +46,7 @@ namespace Chop8.ViewModels
 
         public async Task Update()
         {
-            var response = await httpClient.GetAsync("/securityGuard");
+            var response = await httpClient.GetAsync("/securityGuards");
             if (!response.IsSuccessStatusCode)
             {
                 Message = $"Ошибка сервера {response.StatusCode}";
@@ -65,7 +65,7 @@ namespace Chop8.ViewModels
         public async Task Delete()
         {
             if (SelectedSecurityGuard == null) return;
-            var response = await httpClient.DeleteAsync($"/securityGuard/{SelectedSecurityGuard.id}");
+            var response = await httpClient.DeleteAsync($"/securityGuards/{SelectedSecurityGuard.id}");
             if (!response.IsSuccessStatusCode)
             {
                 Message = "Ошибка удаления со стороны сервера";
@@ -79,7 +79,7 @@ namespace Chop8.ViewModels
         public async Task Add()
         {
             var SecurityGuard = new SecurityGuard();
-            var response = await httpClient.PostAsJsonAsync($"/securityGuard", SecurityGuard);
+            var response = await httpClient.PostAsJsonAsync($"/securityGuards", SecurityGuard);
             if (!response.IsSuccessStatusCode)
             {
                 Message = "Ошибка добавления со стороны сервера";

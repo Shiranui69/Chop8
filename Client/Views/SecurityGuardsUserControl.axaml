@@ -16,7 +16,7 @@
 		<StackPanel DockPanel.Dock="Bottom" >
 			<TextBlock Text="{Binding Message}"/>
 		</StackPanel>
-		<DataGrid ItemsSource="{Binding SecurityGuards}" AutoGenerateColumns="True" SelectedItem="{Binding _selectedSecurityGuard}">
+		<DataGrid ItemsSource="{Binding SecurityGuards}" AutoGenerateColumns="True" SelectedItem="{Binding SelectedSecurityGuard}">
 
 		</DataGrid>
 	</DockPanel>

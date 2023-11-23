@@ -5,7 +5,7 @@ using Chop.Models;
 namespace Chop.Controllers
 {
     [ApiController]
-    [Route("/SecurityGuards")]
+    [Route("/securityGuards")]
     public class SecurityGuardController : Controller
     {
 
